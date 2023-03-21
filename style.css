@@ -1,0 +1,76 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: rgb(241, 237, 237);
+  font-family: Lato, sans-serif;
+}
+
+header {
+  background-color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  font-style: italic;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 2px 12px 1px rgba(159, 144, 144, 0.76);
+  -webkit-box-shadow: 0px 2px 12px 1px rgba(159, 144, 144, 0.76);
+  -moz-box-shadow: 0px 2px 12px 1px rgba(159, 144, 144, 0.76);
+}
+
+main {
+  margin: 2rem 1rem;
+  padding: 1rem;
+  border: 1px solid red;
+}
+
+.card_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 1.1rem;
+  box-shadow: 0px 11px 33px -5px rgba(0,0,0,0.1);
+}
+
+.card button {
+  width: 60%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-family: Lato;
+}
+
+
+.card h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+}
+
+.card .read {
+  background-color: rgb(159, 236, 159);
+}
+
+.card .unread {
+  background-color: rgb(255, 121, 121);
+}
