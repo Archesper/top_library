@@ -5,6 +5,13 @@ myLibrary.push(new Book("The Book of Life", "Little Mix", 77, true));
 myLibrary.push(new Book("The Book of Life", "Little Mix", 77, true));
 myLibrary.push(new Book("The Book of Life", "Little Mix", 77, false));
 
+// Add modal event listener
+const add_book = document.getElementById("add_btn");
+const modal = document.querySelector("dialog");
+add_book.addEventListener("click", () => {
+  modal.showModal();
+});
+
 function Book(title, author, pages, read) {
   this.title = title;
   this.author = author;
@@ -36,12 +43,12 @@ function displayBooks(books) {
     title.textContent = '"' + book.title + '"';
     author.textContent = book.author;
     pages.textContent = book.pages + " pages";
-    read_status.textContent = book.read ? "Read" : "Not Read"
-    remove.textContent = "Remove"
+    read_status.textContent = book.read ? "Read" : "Not Read";
+    remove.textContent = "Remove";
     card.append(title, author, pages, read_status, remove);
     // Add card to grid
     grid.append(card);
   });
 }
 
-displayBooks(myLibrary)
+displayBooks(myLibrary);
