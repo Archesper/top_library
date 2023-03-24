@@ -1,10 +1,5 @@
 let myLibrary = [];
 
-// temporary to try out displayBooks()
-myLibrary.push(new Book("The Book of Life", "Little Mix", 77, true));
-myLibrary.push(new Book("The Book of Life", "Little Mix", 77, true));
-myLibrary.push(new Book("The Book of Life", "Little Mix", 77, false));
-
 // Add modal event listener
 const add_book = document.getElementById("add_btn");
 const modal = document.querySelector("dialog");
@@ -55,7 +50,7 @@ function displayBooks(books) {
     read_status.classList.add(book.read ? "read" : "unread");
     // Add event listeners
     remove.addEventListener("click", removeBook);
-    read_status.addEventListener("click", toggleReadStatus)
+    read_status.addEventListener("click", toggleReadStatus);
     // Add content
     title.textContent = '"' + book.title + '"';
     author.textContent = book.author;
@@ -95,7 +90,7 @@ function toggleReadStatus(e) {
   const bookObject = myLibrary[bookDOMNode.dataset.index];
   const readStatusButton =
     bookDOMNode.querySelector(".unread") || bookDOMNode.querySelector(".read");
-    readStatusButton.classList.toggle("read");
+  readStatusButton.classList.toggle("read");
   readStatusButton.classList.toggle("unread");
   readStatusButton.textContent = readStatusButton.classList.contains("read")
     ? "Read"
